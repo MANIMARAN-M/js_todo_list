@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e1fbf1;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "East Sea Dokdo", cursive;
+  letter-spacing: 1px;
+}
+
+.task-title {
+  text-align: center;
+  margin: 30px;
+  font-size: 29px;
+  letter-spacing: 1px;
+}
+.main-head {
+  display: flex;
+  max-width: 1200px;
+  /* background-color: #49eaa9; */
+  padding: 30px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px 0 rgba(73, 231, 169, 0.3);
+}
+
+/* Input Section */
+
+.col-3 {
+  flex-basis: 30%;
+}
+#form input[type="text"] {
+  width: 90%;
+  height: 30px;
+  margin: 10px 0;
+  border: none;
+  padding: 5px;
+  outline: none;
+  color: #949494;
+  font-size: 16px;
+}
+#form input[type="text"]:placeholder-shown {
+  font-size: 16px;
+}
+#form input[type="submit"] {
+  padding: 8px 16px;
+  font-size: 18px;
+  background-color: #49eaa9;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Value disply Section */
+
+.col-9 {
+  flex-basis: 70%;
+  padding: 15px;
+}
+.col-9 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.col-9 table th {
+  /* border: 1px solid #49eaa9; */
+  background-color: #fff;
+  font-size: 25px;
+  text-align: left;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.col-9 table td {
+  padding: 10px;
+  font-size: 22px;
+}
+
+@media (max-width: 670px) {
+  .main-head {
+    flex-wrap: wrap;
+  }
+  .col-3 {
+    flex-basis: 100%;
+  }
+  .col-9 {
+    flex-basis: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  #form input[type="text"] {
+    width: 100%;
+  }
+}
