@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   margin: 0;
@@ -8,21 +9,25 @@
 }
 body {
   background-color: #e1fbf1;
-  /* font-family: "Roboto", sans-serif; */
-  font-family: "East Sea Dokdo", cursive;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
-
+.js-dom {
+  width: 100%;
+}
 .task-title {
   text-align: center;
   margin: 30px;
   font-size: 29px;
-  letter-spacing: 1px;
 }
 .main-head {
   display: flex;
   max-width: 1200px;
-  /* background-color: #49eaa9; */
   padding: 30px;
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(73, 231, 169, 0.3);
@@ -33,17 +38,17 @@ body {
 .col-3 {
   flex-basis: 30%;
 }
+.fname {
+  margin: 10px 0;
+}
 #form input[type="text"] {
   width: 90%;
-  height: 30px;
+  height: 35px;
   margin: 10px 0;
   border: none;
   padding: 5px;
   outline: none;
-  color: #949494;
-  font-size: 16px;
-}
-#form input[type="text"]:placeholder-shown {
+  color: #868894;
   font-size: 16px;
 }
 #form input[type="submit"] {
@@ -52,9 +57,32 @@ body {
   background-color: #49eaa9;
   border: none;
   color: #fff;
-  margin-top: 10px;
   cursor: pointer;
   outline: none;
+}
+.fname {
+  position: relative;
+}
+.fname span {
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  font-size: 16px;
+  color: #868894;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.fname #foodId:focus ~ span,
+.fname #foodId:valid ~ span,
+.fname #quantityID:focus ~ span,
+.fname #quantityID:valid ~ span,
+.fname #rateID:focus ~ span,
+.fname #rateID:valid ~ span {
+  transform: translateY(-29px);
+  left: 0;
+  font-size: 15px;
 }
 
 /* Value disply Section */
@@ -68,16 +96,16 @@ body {
   border-collapse: collapse;
 }
 .col-9 table th {
-  /* border: 1px solid #49eaa9; */
   background-color: #fff;
-  font-size: 25px;
+  font-size: 18px;
   text-align: left;
   padding: 10px;
   letter-spacing: 1px;
+  color: #868894;
 }
 .col-9 table td {
   padding: 10px;
-  font-size: 22px;
+  font-size: 15px;
 }
 
 @media (max-width: 670px) {
