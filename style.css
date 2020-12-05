@@ -107,7 +107,11 @@ body {
   padding: 10px;
   font-size: 15px;
 }
-
+@media (max-width: 1200px) {
+  .main-head {
+    margin: 0 10px;
+  }
+}
 @media (max-width: 670px) {
   .main-head {
     flex-wrap: wrap;
@@ -122,5 +126,15 @@ body {
   }
   #form input[type="text"] {
     width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .col-9 table th,
+  .fname span {
+    font-size: 14px;
+  }
+  .col-9 table td {
+    padding: 10px;
+    font-size: 12px;
   }
 }
